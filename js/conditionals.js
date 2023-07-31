@@ -21,33 +21,35 @@
  * console.logging the function's return value
  */
 
-function analyseColor(input) {
+function analyseColor(color) {
+    let lowercaseColor = color.toLowerCase()
 
-
-    if (input === "blue") {
-        console.log(input + (" is the color of the ocean."));
-    } else if (input === "red") {
-        console.log(input + " is the color of burning flames.");
-    } else if (input === "green") {
-        console.log(input + " is the color your grass should be.");
-    } else if (input === "orange") {
-        console.log(input + " is a fantastic color. Go Horns Go!");
+    if (lowercaseColor === "blue") {
+        return "Blue is the color of the ocean.";
+    } else if (lowercaseColor === "red") {
+        return "Red is the color of burning flames.";
+    } else if (lowercaseColor === "green") {
+        return "Green is the color your grass should be.";
+    } else if (lowercaseColor === "orange") {
+        return "Orange is a fantastic color. Go Horns Go!";
     } else {
         ("")
-        console.log("Sorry I don't know what that color is.")
+        return "Sorry, I don't know what that color is."
     }
-    console.log("The color is " + input + ".")
+
 };
 
-// Don't change the next two lines!
-// These lines create two variables for you:
-// - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
-//                  will contain a different color every time the page loads)
-let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-let randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-console.log (analyseColor(randomColor));
+console.log(analyseColor("grEEN"))
+//
+// // Don't change the next two lines!
+// // These lines create two variables for you:
+// // - `colors`: a list of the colors of the rainbow
+// // - `randomColor`: contains a single random color value from the list (this
+// //                  will contain a different color every time the page loads)
+// let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// let randomColor = colors[Math.floor(Math.random() * colors.length)];
+//
+// console.log (analyseColor(randomColor));
 
 /**
  * TODO:
@@ -59,13 +61,65 @@ console.log (analyseColor(randomColor));
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-
+//
+// function analyseColor(input) {
+//
+//     switch(input) {
+//         case "red":
+//             alert (input + " is the color of burning flames.")
+//             break;
+//         case "blue":
+//             alert (input + " is the color of the ocean.")
+//             break;
+//         case "green":
+//             alert (input + " is the color your grass should be.");
+//             break;
+//         case "orange":
+//             alert (input + "  is a fantastic color. Go Horns Go!")
+//             break;
+//         default:
+//             alert(input + " isn't one of my favorite colors.")
+//     }
+//     console.log("The color is " + input + ".")
+// };
+//
+// let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// let randomColor = colors[Math.floor(Math.random() * colors.length)];
+//
+// (analyseColor(randomColor));
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+// let input = prompt("What is your favorite color?")
+// function analyseColor(input) {
+//
+//     switch(input) {
+//         case "red":
+//             alert (input + " is the color of burning flames.")
+//             break;
+//         case "blue":
+//             alert (input + " is the color of the ocean.")
+//             break;
+//         case "green":
+//             alert (input + " is the color your grass should be.");
+//             break;
+//         case "orange":
+//             alert (input + " is a fantastic color. Go Horns Go!")
+//             break;
+//         default:
+//             alert(input + " isn't one of my favorite colors.")
+//     }
+//     console.log("The color is " + input + ".")
+// };
+//
+// (analyseColor(input));
+
+// let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// let randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 /* ########################################################################## */
 
@@ -89,6 +143,45 @@ console.log (analyseColor(randomColor));
  * return value.
  */
 
+// function calculateTotal(lucky, price) {
+//
+//     if (lucky === 0) {
+//         return "Your total after dicount is: $" + price;
+//     else if
+//         (lucky === 1) {
+//         return "Your total after dicount is: $" + (price - (.10 * price));
+//     else if
+//         (input === 2) {
+//         return "Your total after dicount is: $" + (price - (.25 * price));
+//     else if
+//         (input === "3") {
+//         return "Your total after dicount is: $" + (price - (.35 * price));
+//     else if
+//         (input === "4") {
+//         return "Your total after dicount is: $" + (price - (.50 * price));
+//     else if
+//         (input === "5") {
+//        return "Your total after dicount is: $" + (price - (.10 * price));
+//     }
+// }
+// console.log (calculateTotal(2, 33));
+
+//
+//     calculateTotal(input)
+//  if (input === "blue") {
+// //         console.log(input + (" is the color of the ocean."));
+// //     } else if (input === "red") {
+// //         console.log(input + " is the color of burning flames.");
+// //     } else if (input === "green") {
+// //         console.log(input + " is the color your grass should be.");
+// //     } else if (input === "orange") {
+// //         console.log(input + " is a fantastic color. Go Horns Go!");
+// //     } else {
+// //         ("")
+// //         console.log("Sorry I don't know what that color is.")
+// //     }
+// //     console.log("The color is " + input + ".")
+// // };
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
