@@ -21,25 +21,33 @@
  * console.logging the function's return value
  */
 
-function analyseColor(color) {
-    let lowercaseColor = color.toLowerCase()
+// function analyseColor(color) {
+//     let lowercaseColor = color.toLowerCase()
+//
+//     if (lowercaseColor === "blue") {
+//         return "Blue is the color of the ocean.";
+//     } else if (lowercaseColor === "red") {
+//         return "Red is the color of burning flames.";
+//     } else if (lowercaseColor === "green") {
+//         return "Green is the color your grass should be.";
+//     } else if (lowercaseColor === "orange") {
+//         return "Orange is a fantastic color. Go Horns Go!";
+//     } else if (lowercaseColor === "yellow") {
+//         return "Yellow is the color of sunflowers.";
+//     } else if (lowercaseColor === "indigo") {
+//         return "Indigo is a very unique color.";
+//     } else if (lowercaseColor === "violet") {
+//         return "Violet is a pretty color and name.";
+//     }
+//     else {
+//         ("")
+//         return "Sorry, I don't know what that color is."
+//     }
+//
+// };
 
-    if (lowercaseColor === "blue") {
-        return "Blue is the color of the ocean.";
-    } else if (lowercaseColor === "red") {
-        return "Red is the color of burning flames.";
-    } else if (lowercaseColor === "green") {
-        return "Green is the color your grass should be.";
-    } else if (lowercaseColor === "orange") {
-        return "Orange is a fantastic color. Go Horns Go!";
-    } else {
-        ("")
-        return "Sorry, I don't know what that color is."
-    }
-
-};
-
-console.log(analyseColor("grEEN"))
+// console.log(analyseColor("blue"))
+// console.log(analyseColor("black"))
 //
 // // Don't change the next two lines!
 // // These lines create two variables for you:
@@ -48,8 +56,6 @@ console.log(analyseColor("grEEN"))
 // //                  will contain a different color every time the page loads)
 // let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 // let randomColor = colors[Math.floor(Math.random() * colors.length)];
-//
-// console.log (analyseColor(randomColor));
 
 /**
  * TODO:
@@ -57,36 +63,48 @@ console.log(analyseColor("grEEN"))
  * You should see a different message every time you refresh the page
  */
 
+// console.log (analyseColor(randomColor));
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 //
-// function analyseColor(input) {
+// function analyseColor(color) {
+//     let lowercaseColor = color.toLowerCase()
 //
-//     switch(input) {
+//     switch(lowercaseColor) {
 //         case "red":
-//             alert (input + " is the color of burning flames.")
+//             return (lowercaseColor + ", is the color of burning flames.")
 //             break;
 //         case "blue":
-//             alert (input + " is the color of the ocean.")
+//             return (lowercaseColor + ", is the color of the ocean.")
 //             break;
 //         case "green":
-//             alert (input + " is the color your grass should be.");
+//             return (lowercaseColor + ", is the color your grass should be.");
 //             break;
 //         case "orange":
-//             alert (input + "  is a fantastic color. Go Horns Go!")
+//             return (lowercaseColor + ", is a fantastic color. Go Horns Go!")
+//             break;
+//         case "yellow":
+//             return (lowercaseColor + ", is the color of sunflowers.")
+//             break;
+//         case "indigo":
+//             return (lowercaseColor + ", is a very unique color.")
+//             break;
+//         case "violet":
+//             return (lowercaseColor + ", is a pretty color and name.")
 //             break;
 //         default:
-//             alert(input + " isn't one of my favorite colors.")
+//             return (lowercaseColor + ", isn't one of my favorite colors.")
 //     }
-//     console.log("The color is " + input + ".")
 // };
-//
+
 // let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 // let randomColor = colors[Math.floor(Math.random() * colors.length)];
-//
-// (analyseColor(randomColor));
+
+// console.log(analyseColor(randomColor));
+// console.log(analyseColor("black"));
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -94,33 +112,11 @@ console.log(analyseColor("grEEN"))
  * function to show it to the user.
  */
 
-// let input = prompt("What is your favorite color?")
-// function analyseColor(input) {
+// let userColor = prompt("Please, pick a color?")
 //
-//     switch(input) {
-//         case "red":
-//             alert (input + " is the color of burning flames.")
-//             break;
-//         case "blue":
-//             alert (input + " is the color of the ocean.")
-//             break;
-//         case "green":
-//             alert (input + " is the color your grass should be.");
-//             break;
-//         case "orange":
-//             alert (input + " is a fantastic color. Go Horns Go!")
-//             break;
-//         default:
-//             alert(input + " isn't one of my favorite colors.")
-//     }
-//     console.log("The color is " + input + ".")
-// };
+// alert(analyseColor(userColor))
 //
-// (analyseColor(input));
-
-// let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-// let randomColor = colors[Math.floor(Math.random() * colors.length)];
-
+// console.log(userColor)
 /* ########################################################################## */
 
 /**
@@ -144,44 +140,27 @@ console.log(analyseColor("grEEN"))
  */
 
 // function calculateTotal(lucky, price) {
-//
 //     if (lucky === 0) {
-//         return "Your total after dicount is: $" + price;
-//     else if
-//         (lucky === 1) {
-//         return "Your total after dicount is: $" + (price - (.10 * price));
-//     else if
-//         (input === 2) {
-//         return "Your total after dicount is: $" + (price - (.25 * price));
-//     else if
-//         (input === "3") {
-//         return "Your total after dicount is: $" + (price - (.35 * price));
-//     else if
-//         (input === "4") {
-//         return "Your total after dicount is: $" + (price - (.50 * price));
-//     else if
-//         (input === "5") {
-//        return "Your total after dicount is: $" + (price - (.10 * price));
+//         return "Your total after discount is: $" + price;
+//     }else if (lucky === 1) {
+//         return "Your total after discount is: $" + (price - (.10 * price));
+//     }else if (lucky === 2) {
+//         return "Your total after discount is: $" + (price - (.25 * price));
+//     }else if (lucky === 3) {
+//         return "Your total after discount is: $" + (price - (.35 * price));
+//     }else if (lucky === 4) {
+//         return "Your total after discount is: $" + (price - (.50 * price));
+//     }else if (lucky === 5) {
+//        return "Your total after discount is: $" + (price - price);
 //     }
 // }
-// console.log (calculateTotal(2, 33));
+// console.log (calculateTotal(1, 100));
+// console.log (calculateTotal(2, 100));
+// console.log (calculateTotal(3, 100));
+// console.log (calculateTotal(4, 100));
+// console.log (calculateTotal(5, 100));
 
-//
-//     calculateTotal(input)
-//  if (input === "blue") {
-// //         console.log(input + (" is the color of the ocean."));
-// //     } else if (input === "red") {
-// //         console.log(input + " is the color of burning flames.");
-// //     } else if (input === "green") {
-// //         console.log(input + " is the color your grass should be.");
-// //     } else if (input === "orange") {
-// //         console.log(input + " is a fantastic color. Go Horns Go!");
-// //     } else {
-// //         ("")
-// //         console.log("Sorry I don't know what that color is.")
-// //     }
-// //     console.log("The color is " + input + ".")
-// // };
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -191,7 +170,13 @@ console.log(analyseColor("grEEN"))
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+// let luckyNumber = Math.floor(Math.random() * 6);
+//
+// let userTotal = prompt("What was your total bill?")
+//
+// alert (`Your lucky number is ${luckyNumber}`);
+// alert(`Your price before discount was ${userTotal}`);
+// alert(`${calculateTotal(luckyNumber, userTotal)}`);
 
 /**
  * TODO:
@@ -211,3 +196,31 @@ console.log(analyseColor("grEEN"))
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+let userConfirm = confirm ("Would you like to enter a number?")
+
+if (userConfirm) {
+    let userNumber = prompt("Please enter a number.")
+
+    if (!isNaN(userNumber)){
+        let parsedNumber = parseFloat(userNumber);
+
+        let evenOrOddMessage = "";
+        if (parsedNumber % 2 === 0) {
+            evenOrOddMessage = "Your number is even" }
+        else { evenOrOddMessage = "Your number is odd."
+        }
+        alert(evenOrOddMessage);
+
+        alert(`Your number plus 100 is ` + `${parsedNumber + 100}`);
+
+        let positiveNegativeMessage = (parsedNumber >=0) ?
+            "Your number is positive!" : "Your number is negative!"
+        alert(positiveNegativeMessage)
+    } else (
+        alert("Hey, that's not a number")
+    )
+} else (
+    alert( "Thank you. See you nex time.")
+)
+
