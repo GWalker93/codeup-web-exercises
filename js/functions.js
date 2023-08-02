@@ -9,9 +9,9 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-// function sayHello(name) {
-//     return `Hello ` + name;
-// }
+function sayHello(name) {
+    return `Hello, `+name+"!" ;
+}
 
 /**
  * TODO:
@@ -21,9 +21,9 @@
  * console.log 'helloMessage' to check your work
  */
 
-// let helloMessage = sayHello("G");
-//
-// console.log(helloMessage);
+let helloMessage = sayHello("G");
+
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -32,13 +32,15 @@
  * console.
  */
 
-// let myName = "Gerald"
-//
-// console.log(sayHello (myName))
+let myName = "Gerald"
+
+helloMessage=sayHello(myName);
+
+console.log(helloMessage)
 
 // // Don't modify the following line, it generates a random number between 1 and 3
 // // and stores it in a variable named random
-// var random = Math.floor((Math.random() * 3) + 1);
+var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -83,7 +85,7 @@
 // {
 //     return (tipPercentage * totalBill)
 // }
-// // console.log(calculateTip(tipPercentage, totalBill))
+// console.log(calculateTip(.2, 10))
 
 
 /**
@@ -93,10 +95,14 @@
  * then display the dollar amount they should tip
  */
 
-// let usertotalBill = prompt("How much was your bill?")
-// let usertipPercentage = prompt("How much would you like to tip?")
+// let usertotalBill = Number(prompt("How much was your bill?"));
 //
-// alert("You need to tip $" + calculateTip(usertotalBill, usertipPercentage) )
+//
+// let usertipPercentage = Number(prompt("How much would you like to tip?"));
+//
+// let tipDeci = usertipPercentage / 100;
+//
+// alert("You need to tip $" + calculateTip(usertotalBill, tipDeci).toFixed(2))
 
 /**
  * TODO:
@@ -113,7 +119,11 @@
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-function applyDiscount(priceBefore, discountAmount) {
-    return (priceBefore) - (priceBefore * discountAmount)
+let discountAmountRandom = Math.random().toFixed(2)
+function applyDiscount(priceBefore, discountAmountRandom) {
+    return (priceBefore) - (priceBefore * discountAmountRandom)
 }
+console.log("the discount number is " + discountAmountRandom)
+console.log("Final price is " + applyDiscount(100, discountAmountRandom))
 
+//Hard work
