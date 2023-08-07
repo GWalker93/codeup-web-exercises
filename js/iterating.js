@@ -1,16 +1,16 @@
 (function(){
     "use strict";
 
-    console.log("Hi")
+    console.log("Hi");
 
-    console.log("------------")
+    console.log("------------");
     /**
      * TODO:
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
 
-    let names = ["G", "Audrey", "Davis", "Twin"]
+    let names = ["G", "Audrey", "Davis", "Twin"];
 
 
     /**
@@ -18,8 +18,9 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
+    console.log(names);
+    console.log(names.length)
 
-    console.log(names)
 
     console.log("------------")
 
@@ -59,8 +60,8 @@
      * Refactor your above code to use a `forEach` loop
      */
 
-    names.forEach(function (names) {
-        console.log('Their names are: ' + names + '.')
+    names.forEach(function (element) {
+        console.log('Their names are: ' + element + '.')
         })
 
     console.log("------------")
@@ -79,7 +80,7 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    let num = ["hotdog", true, 3, 4, 76]
+    let num = [1,2,3,4,5]
 
     console.log('return ' + num[0])
     console.log('return ' + num[1])
@@ -89,17 +90,17 @@
     console.log("-----------")
 
     function first(num) {
-        return num[0]
+        return num[0];
     }
     console.log("returns " + first(num))
 
     function second(num) {
-        return num[1]
+        return num[1];
     }
     console.log("returns " + second(num))
 
     function last(num) {
-        return num[4]
+        return num[num.length - 1];
     }
     console.log("returns " + last(num))
 
