@@ -30,8 +30,17 @@ console.log("Hey");
 // #4
 
 // function x(y){
-for (let i = 1; i <= 9; i++) {
-    let answer = (x +1)
-    console.log(answer)
-}
+// for (let i = 1; i <= 9; i++) {
+//     a1 = (i*(i))
+//     // a2 = (i+1)
+//     // a3 = (i+2)
+//     // a4 = (i+3)
+//
+//     console.log(a1)
+    // console.log(a2,a2)
+    // console.log(a3,a3,a3)
+    // console.log(a4,a4,a4,a4)
+ // }
 
+for (let i = 100; i > 5; i -= 5){
+        console.log(i)}
