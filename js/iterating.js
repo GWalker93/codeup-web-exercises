@@ -85,25 +85,24 @@
     console.log('return ' + num[1])
     console.log('return ' + num[4])
 
-    for (let i = 0; i < num.length; i++) {
-        console.log("here it is " + i + " is " + num[i])
+
+    console.log("-----------")
+
+    function first(num) {
+        return num[0]
     }
+    console.log("returns " + first(num))
 
-    num.forEach(function(num){
-        console.log('here ya go: ' + num[0] + '.'
-        )
-    })
+    function second(num) {
+        return num[1]
+    }
+    console.log("returns " + second(num))
+
+    function last(num) {
+        return num[4]
+    }
+    console.log("returns " + last(num))
+
     console.log("---------------")
-
-    // function first(num)
-    //     let numb = [1,2,3,4,5]
-    //     return numb[]
-    // }
-    // function second() {
-    //     return []
-    // }
-    // function last() {
-    //     return []
-    // }
 
 })();
