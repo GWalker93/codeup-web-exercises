@@ -53,28 +53,33 @@ console.log(" ")
      * and console.log the relevant messages for each person
      */
 
-
-
-    var shoppers = [
-        {name: 'Cameron',
-            amount: 180},
-        {name: 'Ryan',
-            amount: 250},
-        {name: 'George',
-            amount: 320}
-    ];
-
+    let shoppers = [
+            { name: `Cameron`,
+            amount: 180, },
+            { name: `Ryan`,
+                amount: 250,},
+            { name: `George`,
+                amount: 320,}
+]
     console.log(shoppers[0].name + " spent " + shoppers[0].amount + " at the store.")
-    console.log(shoppers[1].name + " spent " + shoppers[1].amount + " at the store.")
+    console.log(shoppers[1].name + " spent " +   shoppers[1].amount + " at the store.")
     console.log(shoppers[2].name + " spent " + shoppers[2].amount + " at the store.")
 
-    if (x >= 200 ){
-        return x/.
+    function priceAfterDiscount(amount) {
+    if (amount > 200 ){
+        return (" We can offer a 12% discount. Thier price after discount will be $" + parseInt(amount - (amount*.12) + ".") )
     }
-        else if
+    else {
+        return ("At this time, we can not offer them a discount. Thier total due is " + amount + ".")
+    }}
 
-     //Spending more than $200, you will get a 12% disocunt.
-    // Cameron no dicosunt, ryan yes, george yes.
+    console.log(" ")
+
+    for ( let i = 0; i <shoppers.length; i++){
+        console.log("Since " + shoppers[i].name + " spent " + shoppers[i].amount + " at the store. " + priceAfterDiscount(shoppers[i].amount))
+    }
+
+    console.log("")
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -88,6 +93,46 @@ console.log(" ")
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    let books = [
+        { title: "Hunger Games",
+          author: {
+            firstName: "Suzanne",
+            lastName: "Collins",},
+            num: "1"
+          , },
+        { title: "Outsiders",
+            author: {
+                firstName: "S. E.",
+                lastName: "Hinton",},
+                num: "2",
+             },
+        { title: "Harry Potter and the Goblet of Fire",
+            author: {
+                firstName: "JK",
+                lastName: "Rowling",},
+                num: "3",
+            },
+        { title: "Will",
+            author: {
+                firstName: "Will",
+                lastName: "Smith",},
+                num: "4",
+            },
+        { title: "First",
+            author: {
+                firstName: "Rich",
+                lastName: "Frowning",},
+                num: "5",
+            },]
+
+    console.log(books)
+
+    console.log(books[0].title)
+    console.log(books[2].author.firstName)
+    console.log(books[4].author.lastName)
+
+    console.log("-----------------")
 
     /**
      * TODO:
@@ -114,6 +159,12 @@ console.log(" ")
      *      ...
      */
 
+    for ( let i = 0; i <books.length; i++){
+        (console.log("Book # " + books[i].num)),
+        (console.log("Title: " + books[i].title)),
+        (console.log("Author: " + books[i].author.firstName +" "+ books[i].author.lastName)),
+        (console.log("---")) }
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -124,5 +175,13 @@ console.log(" ")
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook (title,author) {
+        return "book"
+    }
+
+    function showBookInfo (book) {
+        return "tittle, author"
+    }
 
 })();
