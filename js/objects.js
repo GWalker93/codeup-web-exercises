@@ -8,12 +8,19 @@
      * Create an object with firstName and lastName properties that are strings
      * with your first and last name. Store this object in a variable named
      * `person`.
-     *
      * Example:
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+  let person = {}
+        person.firstName = "Gerld"
+        person.lastName = "Walker"
+
+    console.log(person.firstName)
+    console.log(person.lastName)
+
+    console.log(" ")
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -23,6 +30,14 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    person.sayHello = function () {
+        console.log("Hello from " + person.firstName + " "+ person.lastName + "!")
+    }
+
+   person.sayHello()
+
+console.log(" ")
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -38,11 +53,28 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+
+
+    var shoppers = [
+        {name: 'Cameron',
+            amount: 180},
+        {name: 'Ryan',
+            amount: 250},
+        {name: 'George',
+            amount: 320}
+    ];
+
+    console.log(shoppers[0].name + " spent " + shoppers[0].amount + " at the store.")
+    console.log(shoppers[1].name + " spent " + shoppers[1].amount + " at the store.")
+    console.log(shoppers[2].name + " spent " + shoppers[2].amount + " at the store.")
+
+    if (x >= 200 ){
+        return x/.
+    }
+        else if
+
+     //Spending more than $200, you will get a 12% disocunt.
+    // Cameron no dicosunt, ryan yes, george yes.
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
