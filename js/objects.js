@@ -13,12 +13,14 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-  let person = {}
-        person.firstName = "Gerld"
-        person.lastName = "Walker"
+  let person = {};
+        person.firstName = "Gerld";
+        person.lastName = "Walker";
 
-    console.log(person.firstName)
-    console.log(person.lastName)
+    console.log(person.firstName);
+    console.log(person.lastName);
+
+   console.log(`${person.firstName} ${person.lastName} is in class`)
 
     console.log(" ")
     /**
@@ -54,30 +56,37 @@ console.log(" ")
      */
 
     let shoppers = [
-            { name: `Cameron`,
-            amount: 180, },
-            { name: `Ryan`,
-                amount: 250,},
-            { name: `George`,
-                amount: 320,}
+            { name: `Cameron`,  amount: 180, },
+            { name: `Ryan`,  amount: 250,},
+            { name: `George`,  amount: 320,}
 ]
     console.log(shoppers[0].name + " spent " + shoppers[0].amount + " at the store.")
     console.log(shoppers[1].name + " spent " +   shoppers[1].amount + " at the store.")
     console.log(shoppers[2].name + " spent " + shoppers[2].amount + " at the store.")
 
+//
+//     var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+//
+// // loop through the array and log the values
+//     shapes.forEach(function(shape) {
+//         console.log('Here is a lovely shape: ' + shape + '.');
+//     });
+
+
     function priceAfterDiscount(amount) {
     if (amount > 200 ){
-        return (" We can offer a 12% discount. Thier price after discount will be $" + parseInt(amount - (amount*.12) + ".") )
+        return (" We can offer a 12% discount. Thier price after discount will be $" + ((amount - (amount*.12)).toFixed(2) + ".") )
     }
     else {
-        return ("At this time, we can not offer them a discount. Thier total due is " + amount + ".")
+        return ("At this time, we can not offer them a discount. Thier total due is " + (amount).toFixed(2) + ".")
     }}
 
     console.log(" ")
 
-    for ( let i = 0; i <shoppers.length; i++){
-        console.log("Since " + shoppers[i].name + " spent " + shoppers[i].amount + " at the store. " + priceAfterDiscount(shoppers[i].amount))
-    }
+
+    // for ( let i = 0; i <shoppers.length; i++){
+    //     console.log("Since " + shoppers[i].name + " spent " + shoppers[i].amount + " at the store. " + priceAfterDiscount(shoppers[i].amount))
+    // }
 
     console.log("")
 
@@ -162,8 +171,11 @@ console.log(" ")
     for ( let i = 0; i <books.length; i++){
         (console.log("Book # " + books[i].num)),
         (console.log("Title: " + books[i].title)),
-        (console.log("Author: " + books[i].author.firstName +" "+ books[i].author.lastName)),
+        (console.log("Author: " + books[i].author.firstName +" "+                books[i].author.lastName)),
         (console.log("---")) }
+
+
+    console.log("~~~~~~~~~~~~~~~~~~")
 
     /**
      * Bonus:
@@ -176,12 +188,55 @@ console.log(" ")
      *   `showBookInfo` function.
      */
 
-    function createBook (title,author) {
-        return "book"
+    function createBook(bookTitle, authorFN, authorLN) {
+        return {
+            title
+        }
     }
 
-    function showBookInfo (book) {
-        return "tittle, author"
-    }
+    // let books = [
+    //     {title: "Hunger Games",
+    //         author: {
+    //             firstName: "Suzanne",
+    //             lastName: "Collins"},
+    //         num: "1",
+    //     },
+    //     {title: "Outsiders",
+    //         author: {
+    //             firstName: "S. E.",
+    //             lastName: "Hinton"},
+    //         num: "2",
+    //     },
+    //     { title: "Harry Potter and the Goblet of Fire",
+    //         author: {
+    //             firstName: "JK",
+    //             lastName: "Rowling"},
+    //         num: "3",
+    //     },
+    //     { title: "Will",
+    //         author: {
+    //             firstName: "Will",
+    //             lastName: "Smith"},
+    //         num: "4",
+    //     },
+    //     {title: "First",
+    //         author: {
+    //             firstName: "Rich",
+    //             lastName: "Frowning"},
+    //         num: "5",
+    //     },
+    // ]
+    // function createBook (title,firstName) {
+    //      return books["num"]
+    // }
 
-})();
+    // for ( let i = 0; i <createBook; i++){
+    //     (console.log(books))}
+
+    // console.log(createBook("Will", "Will"))
+
+    // function showBookInfo (book) {
+    //     return "tittle, author"
+    // }
+
+ })();
