@@ -7,73 +7,72 @@
   <body>
     <form method="POST" action ="https://request-inspector.glitch.me/">
 
-        <header> Welcome to my page!!!!</header>
-        <br>
+        <header>
+            <h1>Welcome to Veridian Dynamics registration page.</h1>
+        </header>
 
-        <label for="Email">Email
-            <br>
-            <br>
-            <input type="text" name="Email" placeholder="Enter Email Here">
-        </label>
-        <br>
-        <br>
+        <main>
 
-        <label for="Password">Password
-            <br>
-            <br>
-            <input type="password" name="Password" placeholder="Enter Password Here">
-        </label>
+                <label>
+                    <h2>Email</h2>
+                    <input required="text" name="Email" placeholder="Enter Email Here">
+                </label>
 
-        <br>
-        <br>
-        <label for="Bio">Bio
-            <br>
-            <br>
-            <textarea name="Bio" placeholder="Please tell us about yourself."></textarea>
-        </label>
-            <br>
+                <label>
+                    <h2>Password</h2>
+                    <input required="password" name="Password" placeholder="Enter Password Here">
+                </label>
 
-        <h2>How did you hear about us?</h2>
+                <label>
+                    <h2>Bio</h2>
+                    <textarea name="Bio" placeholder="Please tell us about yourself."></textarea>
+                </label>
 
-<!--            Billboard   <input type="radio" name="How they heard of us" value="Billboard">-->
-<!--            <br>-->
-<!--            Radio Ad  <input type="radio" name="How they heard of us" value="Radio Ad">-->
-<!--            <br>-->
-<!--            Internet Ad  <input type="radio" name="How they heard of us" value="Internet Ad">-->
-<!--            <br>-->
-<!--            Other   <input type="radio" name="How they heard of us" value="Other">-->
-<!--            <br>-->
+                <h2>How did you hear about us?</h2>
 
-<!--        <br>-->
+    <!--            Billboard   <input type="radio" name="How they heard of us" value="Billboard">-->
+    <!--            <br>-->
+    <!--            Radio Ad  <input type="radio" name="How they heard of us" value="Radio Ad">-->
+    <!--            <br>-->
+    <!--            Internet Ad  <input type="radio" name="How they heard of us" value="Internet Ad">-->
+    <!--            <br>-->
+    <!--            Other   <input type="radio" name="How they heard of us" value="Other">-->
+    <!--            <br>-->
 
-               <input type="checkbox" name="How they heard of us" value="Billboard"> Billboard
+    <!--        <br>-->
+
+                    <label>
+                        <input type="checkbox" name="How they heard of us" value="Billboard"> Billboard
+                    </label>
+                         <br>
+                    <label>
+                        <input type="checkbox" name="How they heard of us" value="Radio Ad"> Radio Ad
+                    </label>
+                        <br>
+                    <label>
+                        <input type="checkbox" name="How they heard of us" value="Internet Ad"> Internet Ad
+                    </label>
+                        <br>
+                    <label>
+                        <input type="checkbox" name="How they heard of us" value="Other"> Other
+                    </label>
+
                 <br>
-                <input type="checkbox" name="How they heard of us" value="Radio Ad">
-                 Billboard
-                <br>
-                <input type="checkbox" name="How they heard of us" value="Internet Ad"> Internet Ad
-                <br>
-                <input type="checkbox" name="How they heard of us" value="Other">
-                Other
-            </select>
-            <br>
 
-        <h2>Which internet browser are you using?</h2>
-            <select name="Which internet browser are they using?">
-                <option value="Chrome">Chrome</option>
-                <option value="FireFox">FireFox</option>
-                <option value="Safari">Safari</option>
-                <option value="Other">Other</option>
-            </select>
-        <br>
-        <br>
-        <label for="Submit Form">Please click here to submit form.
-           </label>
+            <h2>Which internet browser are you using?</h2>
 
+            <select required name="Which internet browser are they using?" >
+                    <option value=""> Please select a Provider.</option>
+                    <option value="Chrome">Chrome</option>
+                    <option value="FireFox">FireFox</option>
+                    <option value="Safari">Safari</option>
+                    <option value="Other">Other</option>
+                </select>
             <br>
-            <br>
-            <button type="submit">Submit the form</button>
+             <H2>Please click here to submit form!</H2>
 
+                <button type="submit">Submit the form</button>
+        </main>
     </form>
   </body>
 </html>
