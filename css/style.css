@@ -6,6 +6,9 @@
 h1{
     text-align: center;
 }
+h1:hover {
+    color: white;
+}
 
 /*Selectors and Properties*/
 
@@ -18,6 +21,9 @@ h1{
 h2{
     color: red;
     text-decoration: underline;
+}
+h2:hover{
+    color: white;
 }
 
 /*Add a style to change the background color of the page.*/
@@ -43,12 +49,39 @@ ul {
     list-style: square;
 }
 /*Add a style to change the font for the entire page. Use google fonts if you would like.*/
-
+ * {
+    font-family: cursive ;
+}
 
 
 /*Add a style to change the table, table cells td and rows tr padding and font sizes.*/
+table{
+    font-size: x-large;
+    padding: 10px;
+}
+td{
+    font-size: medium;
+    padding: 20px;
+}
+ tr {
+    font-size: larger;
+    padding: 30px;
+
+}
 
 
 /*Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active).*/
+
+a:visited {
+    color: blue;
+}
+a:hover{
+    color: white;
+}
+
 /*                                                                                                     Continue experimenting with styles to increase the visual appeal of the page.*/
 /*                                                                                                     Finally, commit the changes to your git repository, and push to GitHub.*/
+
+p {
+    text-align: center;
+}
