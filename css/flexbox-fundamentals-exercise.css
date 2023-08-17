@@ -1,4 +1,3 @@
-@import "resets.css";
 
 * {box-sizing: border-box;}
 
@@ -25,6 +24,7 @@ h2, h3 {
     background: green;
     height: 1em;
     width: 2em;
+
 }
 
 .border {border: 2px solid black;}
@@ -35,19 +35,34 @@ h2, h3 {
     background: white;
     padding: 1em;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
+
     /* enter needed declarations here */
 }
 
 section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     /* enter needed declarations here */
 }
 
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
+
     /* enter needed declarations here */
 }
 section:nth-of-type(1) div:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
     /* enter needed declarations here */
 }
 
@@ -55,13 +70,21 @@ section:nth-of-type(1) div:last-child {
     background: fuchsia;
     width: 3em;
     height: 1em;
+
 }
 
 .purple-box:nth-of-type(1) {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
     /* enter needed declarations here */
 }
 
 .purple-box:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+   flex-grow: 1;
+
     /* enter needed declarations here */
 }
 
@@ -72,10 +95,16 @@ section:nth-of-type(1) div:last-child {
 }
 
 section:nth-of-type(3) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     /* enter needed declarations here */
 }
 
 section:nth-of-type(3) h3 {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
     /* enter needed declarations here */
 
 }
@@ -92,6 +121,9 @@ section:nth-of-type(3) h3 {
     height: 5em;
     width: 5em;
     background: brown;
+    display: flex;
+    flex: 1 0 0;
+
     /* enter needed declarations here */
 }
 
@@ -100,6 +132,9 @@ section:nth-of-type(3) h3 {
 }
 
 section:nth-of-type(5) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     /* enter needed declarations here */
 }
 
@@ -111,7 +146,10 @@ section:nth-of-type(5) {
 
 section:nth-of-type(6) {
     background: coral;
-    height: 14em;
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
     /* enter needed declarations here */
 }
 
