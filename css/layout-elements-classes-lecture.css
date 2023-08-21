@@ -75,6 +75,10 @@ article.container {
     flex: 0 0 40%;
 }
 
+cursor{
+
+}
+
 .column.article-right{
     flex: 0 0 50%;
 }
@@ -87,4 +91,9 @@ footer.container {
     min-height: 370px;
     background-color: #07043B;;
     color: white;
+}
+
+.small-logo {
+    width: 24px;
+    height: 24px;
 }
