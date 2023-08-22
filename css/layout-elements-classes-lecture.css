@@ -97,3 +97,12 @@ footer.container {
     width: 24px;
     height: 24px;
 }
+
+@media screen and (max-width: 900px) {
+    .hero.row {
+        flex-direction: column;
+    }
+    .hero.column:has(img.hero-img){
+        order: -1;
+    }
+}
