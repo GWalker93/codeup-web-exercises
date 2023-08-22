@@ -1,0 +1,147 @@
+/* All your custom styles for this site go here */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page-wrapper {
+    background-color: #D9D9D9;
+
+}
+.container.login {
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    padding: 45px 45px;
+    width: calc(100% - 40px);
+    max-width: 530px;
+    filter: drop-shadow(2px 3px 6px rgba(0, 0, 0, 0.16));
+    z-index: 4;
+    position: relative;
+
+}
+
+.container.login h1 {
+    font-size: 22px;
+    text-align: center;
+}
+
+input {
+    min-height: 55px;
+    border: 1px solid #DDDFE1;
+    padding: 0px 10px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+input.placeholder {
+    color: #ABAFB3;
+}
+
+label.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label.input-group span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+label.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label.checkbox span {
+    font-size: 13px;
+    color: #ABAFB3;
+}
+
+a.link {
+    font-size: 13px;
+}
+
+button.btn {
+    min-height: 55px;
+    border: none;
+    border-radius: 99px;
+    background-color: #AA04F9;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.btn.btn-login {
+    align-self: center;
+    flex: 0 1 auto;
+    min-width: 250px;
+}
+
+.footer-pic1{
+    position: absolute;
+    height: 605px;
+    width: max-content;
+    bottom: 0;
+    z-index: 2;
+}
+
+.footer-pic2{
+    position: absolute;
+    height: 243px;
+    width: max-content;
+    bottom: 0;
+    z-index: 3;
+}
+
+.wave1{
+    position: absolute;
+    top: 167px;
+    left: 0;
+    z-index: 3;
+    width: 185px;
+    height: 185px;
+}
+.wave2{
+    position: absolute;
+    top: 381px;
+    right: 0;
+    z-index: 2;
+    width: 185px;
+    height: 185px;
+}
+
+.dots1{
+    position: absolute;
+    top: 421px;
+    left: 62px;
+    z-index: 2;
+    width: 164px;
+    height: 164px;
+}
+
+.dots2{
+    position: absolute;
+    top: 0;
+    right: 81px;
+    z-index: 2;
+    width: 123px;
+    height: 123px;
+}
+.cancel-button{
+    position: absolute;
+    top: -2%;
+    right: -2%;
+    padding: 10px;
+    background-color: white;
+    border: 10px solid white;
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    z-index: 6;
+
+
+}
+.purple{
+    width: 19px;
+    height: 19px;
+}

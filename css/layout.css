@@ -1,3 +1,4 @@
+@import "resets.css";
 /*
     The "page wrapper" is the outermost container for the page. It mimics
     the behavior of the body tag, but is a container element so that it can be styled
