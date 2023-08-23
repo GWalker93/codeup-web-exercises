@@ -102,7 +102,4 @@ footer.container {
     .hero.row {
         flex-direction: column;
     }
-    .hero.column:has(img.hero-img){
-        order: -1;
-    }
 }
