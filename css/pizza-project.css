@@ -1,0 +1,16 @@
+.jumbotron {
+    height: 364px;
+    background-size: cover;
+}
+.pizza-title{
+       opacity: inherit;
+    }
+
+.top-words{
+    background-color: blue;
+
+}
+a {
+   color: grey;
+    text-decoration: none;
+}
