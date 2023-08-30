@@ -32,14 +32,16 @@ nav a {
 }
 
 @media screen {
-} (max-width:500px) {
+(min-width:500px) {
     .row:has(.alert-info) {
         display: flex;
     }
+
     .row:has(nav) {
         flex-direction: column;
         text-align: center;
     }
+
     ul.nav-links {
         width: 100%;
         flex-direction: column;
@@ -47,13 +49,16 @@ nav a {
         gap: 10px;
         margin-top: 30px;
     }
+
     ul.nav-links a {
         background-color: var(--clr-light-grey);
         width: 100%;
         display: block;
         padding: 10px 20px;
     }
+
     .row:has(.main) {
         flex-direction: column;
     }
+}
 }
