@@ -42,5 +42,10 @@ console.log("Hey");
     // console.log(a4,a4,a4,a4)
  // }
 
-for (let i = 100; i > 5; i -= 5){
+for (let i = 100; i > 0; i -= 5){
         console.log(i)}
+
+
+console.log("")
+console.log("~~~~~~~~~~~~~~~~")
+console.log("")
