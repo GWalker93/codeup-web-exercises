@@ -1,16 +1,21 @@
-.jumbotron {
-    height: 364px;
+:root {
+    --new-color: #0d6efd;
+    --light-color: #f8f8f8;
+}
+
+.hero {
+    background-image: url("/img/pics/pizza-pic.jpg");
+    height: 346px;
     background-size: cover;
+    display: flex;
+    align-items: center;
 }
-.pizza-title{
-       opacity: inherit;
-    }
 
-.top-words{
-    background-color: blue;
-
+main.container {
+    padding-top: 30px;
 }
-a {
-   color: grey;
-    text-decoration: none;
+div.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
