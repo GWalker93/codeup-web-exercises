@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JQuery FAQ</title>
+
+  <style>
+    .invisible {
+      visibility: hidden;
+    }
+  </style>
+
+</head>
+<body>
+
+<p id="click">America's Theme Parks Rides:</p>
+
+<dl>
+  <dt>SixFlags Fiesta Texas</dt>
+  <dd class="invisible">Iron Rattler</dd>
+  <dd class="invisible">Superman-Ride of Steel</dd>
+
+  <dt>SixFlags Across Texas</dt>
+  <dd class="invisible">Reverse Freeze</dd>
+  <dd class="invisible">Goliath</dd>
+
+  <dt>Kings Dominion</dt>
+  <dd class="invisible">Intimidator 305®</dd>
+  <dd class="invisible">Dominator</dd>
+
+  <dt>Busch Garden VA</dt>
+  <dd class="invisible"> Pantheon</dd>
+  <dd class="invisible">Griffion</dd>
+
+  <dt>Busch Garden FL</dt>
+  <dd class="invisible">Iron Gwazi</dd>
+  <dd class="invisible">SheiKra</dd>
+
+  <dt>SixFlags Magic Mountain</dt>
+  <dd class="invisible">Full Throttle</dd>
+  <dd class="invisible">X2</dd>
+
+  <dt>SixFlags Over Georgia</dt>
+  <dd class="invisible">Dare Devil Dive</dd>
+  <dd class="invisible">Twisted Cycle</dd>
+
+  <dt>SixFlags America</dt>
+  <dd class="invisible">Firebird</dd>
+  <dd class="invisible">SuperMan Ride of Steel</dd>
+
+  <dt>SeaWorld San Antonio</dt>
+  <dd class="invisible">Wave Breaker: The Rescue Coaster</dd>
+  <dd class="invisible">Great White</dd>
+
+  <dt>SeaWorld Orlando</dt>
+  <dd class="invisible">Mako</dd>
+  <dd class="invisible">Kraken</dd>
+</dl>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+<script>
+
+  "use strict";
+
+  $(document).ready(function() {
+    const $invisibleElements = $('.invisible');
+    $('#click').click(function(event) {
+      event.preventDefault();
+      $invisibleElements.toggleClass('invisible');
+    });
+  });
+
+  // same thang
+
+  // (()=>{
+  //   const clickButton = document.querySelector('#click');
+  //   const invisibleElements = document.querySelectorAll('.invisible');
+  //   clickButton.addEventListener('click', (event) =>{
+  //     event.preventDefault();
+  //     for (let element of invisibleElements) {
+  //       element.classList.toggle('invisible')
+  //     }
+  //   });
+  // })();
+
+</script>
+
+</body>
+</html>
