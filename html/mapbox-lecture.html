@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MapBox</title>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+
+
+<div id='map' style='width: 700px; height: 700px ;'></div>
+<script src="../js/keys.js"></script>
+<script>
+  mapboxgl.accessToken = mapbox_api_token;
+  const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
+    center: [-98.4870, 29.4260], // starting position [lng, lat]
+    zoom: 10, // starting zoom
+  });
+
+  let marker = new mapboxgl.Marker().setLngLat([-98.6089, 29.5994]).addTo(map)
+  let popup = new mapboxgl.Popup().setHTML("<p>SixFlags</p>")
+  marker.setPopup(popup);
+
+
+</script>
+
+</body>
+</html>

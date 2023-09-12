@@ -56,6 +56,38 @@
   <dd class="invisible">Kraken</dd>
 </dl>
 
+<h3 id="disney-epcot-heading">Disney Epcot</h3>
+
+<ul id="disney-epcot">
+  <li>Test Track</li>
+  <li>Mission:SPACE</li>
+  <li>Guardians Cosmic Rewind</li>
+  <li>Frozen</li>
+  <li>Drinking Around the World</li>
+</ul>
+
+<h3>Disney HollyWood Studios</h3>
+<ul id="disney-hs">
+  <li>Slinky Dog Dash</li>
+  <li>Rock 'n' Roller Coaster</li>
+  <li>Smuggler's Run</li>
+  <li>Rise of the Resistance</li>
+  <li>Tower of Terror</li>
+</ul>
+
+<h3>Disney Animal Kingdom</h3>
+<ul id="disney-ak">
+  <li>Dinosaurs</li>
+  <li>Expedition Everest</li>
+  <li>River Rapids</li>
+  <li>Avatar Flight of Passage</li>
+  <li>Zoo Trip</li>
+</ul>
+
+
+
+
+
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -75,6 +107,10 @@
     });
   });
 
+
+  $.get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1').done(function(data) {
+    console.log(data);
+  })
   // same thang
 
   // (()=>{
