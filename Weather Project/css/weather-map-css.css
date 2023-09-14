@@ -1,6 +1,10 @@
 .test {
-    background-color: red;
+    background-color: #017BFE;
+
 }
 .map-spacing {
     padding: 5px;
+}
+.c{
+    text-decoration: white;
 }
