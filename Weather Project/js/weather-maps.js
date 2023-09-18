@@ -8,7 +8,7 @@ const map = new mapboxgl.Map({
 
     style: 'mapbox://styles/mapbox/streets-v12',
     center: [-98.64798, 29.53525],
-    zoom: 10
+    zoom: 8
 });
 
 const geocoder = new MapboxGeocoder({
@@ -113,7 +113,7 @@ function onDragEnd() {
     <div style="border: 2px solid black">
     <div>${epochConverter(data.daily[i].dt)} </div>
     <hr>
-    <div>Day/Night Temp: ${data.daily[i].temp.day.toFixed(0)}/${data.daily[i].temp.night.toFixed(0)}</div>
+    <div>Day/Night Temp: ${data.daily[i].temp.day.toFixed(0)}<span>&#8457;</span>/${data.daily[i].temp.night.toFixed(0)}<span>&#8457;</span></div>
     <hr>
     <div>Today's conditions: ${data.daily[i].weather[0].description}</div>
     <img src="${cloudCoverage(data.daily[i].weather[0].description)}">
