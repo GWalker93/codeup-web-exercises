@@ -13,22 +13,29 @@
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
         <link rel="stylesheet" href="../css/weather-map-css.css">
 
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
 
     </head>
     <body>
-        <header class="test d-flex justify-content-between align-items-center p-2">
-            <h3 class="c">G's Weather App</h3>
-            <div>Current Location: </div>
+        <header class="test d-flex justify-content-between align-items-center p-2 c">
+            <h3 class="">G's Weather App</h3>
+            <div id="h"></div>
         </header>
-        <div class="container">
-            <div id="weather" class="d-flex gap-5 pt-5 pb-2"></div>
+        <div >
+
+            <div id="geocoder" class="geocoder"></div>
+
+            <div id="weather" class="d-flex gap-5 pt-5 pb-2 weather" ></div>
 
             <div id="map" style='width: 100%; height: 400px ;' class="map-spacing"></div>
 
-
-
+            <pre id="coordinates" class="coordinates"></pre>
 
         </div>
+
+        <hr>
+
         <!--    Keys js-->
         <script src="../js/keys.js"></script>
         <!--J-Query-->
