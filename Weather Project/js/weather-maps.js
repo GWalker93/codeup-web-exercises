@@ -1,7 +1,9 @@
 "use strict";
 
-<!--Maps API-->
-mapboxgl.accessToken = mapbox_api_token;
+import keys from "./keys.js";
+
+//// Maps API
+mapboxgl.accessToken = keys.mapbox_api_token;
 const coordinates = document.getElementById('coordinates');
 const map = new mapboxgl.Map({
     container: 'map',
@@ -12,15 +14,10 @@ const map = new mapboxgl.Map({
 });
 
 const geocoder = new MapboxGeocoder({
-    accessToken: mapbox_api_token,
+    accessToken: keys.mapbox_api_token,
     // mapboxgl: mapboxgl
 
 });
-// document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
-
-// map.addControl( geocoder.on(`results`, function (result) {
-//     console.log(result)
-// }))
 
 const marker = new mapboxgl.Marker({ color: 'blue', rotation: 235,
     draggable: true
@@ -31,7 +28,7 @@ const marker = new mapboxgl.Marker({ color: 'blue', rotation: 235,
 marker.on('dragend', onDragEnd);
 
 map.addControl(
-    geocoder.on(`result`, function (results) {
+    geocoder.on(`result`,  (results) => {
         marker.setLngLat(results.result.center)
         marker.addTo(map)
         onDragEnd()
@@ -42,19 +39,6 @@ window.addEventListener("load", (event) => {
     onDragEnd()
 });
 
-// Add geolocate control to the map.
-
-map.addControl(
-    new mapboxgl.GeolocateControl({
-        positionOptions: {
-            enableHighAccuracy: true
-        },
-// When active the map will receive updates to the device's location as it changes.
-        trackUserLocation: true,
-// Draw an arrow next to the location dot to indicate which direction the device is heading.
-        showUserHeading: true
-    })
-);
 
 // Weather API Current
 const BASE_CURRENT_WEATHER_URL = `https://api.openweathermap.org/data/3.0/onecall?`
@@ -69,9 +53,6 @@ const epochConverter = (epoch)=>{
 function onDragEnd() {
     const lngLat = marker.getLngLat();
     coordinates.style.display = 'block';
-    // coordinates.innerHTML = `Longitude: ${lngLat.lng}<br/>Latitude: ${lngLat.lat}`;
-    // $("#L1").html(`Longitude: ${lngLat.lng}<br/>Latitude: ${lngLat.lat}`);
-    // console.log(lngLat);
 
     let lat = (`${lngLat.lat}`)
 
@@ -81,35 +62,18 @@ function onDragEnd() {
 
     console.log(lat, lng)
 
-    $.get(BASE_CURRENT_WEATHER_URL + `lat=` + lat + `&lon=` + lng + `&appid=${WEATHER_MAP_KEY}&units=imperial`).done((data) => {
+    $.get(BASE_CURRENT_WEATHER_URL + `lat=` + lat + `&lon=` + lng + `&appid=${keys.WEATHER_MAP_KEY}&units=imperial`).done((data) => {
         console.log(data);
     })
 
-    $.get(BASE_CURRENT_WEATHER_URL + `lat=` + lat + `&lon=` + lng + `&appid=${WEATHER_MAP_KEY}&units=imperial`).done((data) => {
-        // // Day temp:
-        // console.log("temp day: " + data.daily[0].temp.day.toFixed(0));
-        // // Night temp:
-        // console.log("temp night: " + data.daily[0].temp.night.toFixed(0));
-        // // Description of weather [e.g., 'overcast']
-        // console.log("description: " + data.daily[0].weather[0].description);
-        // // Day Humidity
-        // console.log("Humidity: " + data.daily[0].humidity);
-        // // Day wind spped:
-        // console.log("wind speed: " + data.daily[0].wind_speed);
-        // // UV Index:
-        // console.log("UV Index: " + data.daily[0].uvi);
-        // // Date
-        // // console.log("Date: " + data.daily[0].dt.toString);
-        // console.log("name: " + data.alerts[0].sender_name);
-
-        // let name1 = data.alerts[0].sender_name
+    $.get(BASE_CURRENT_WEATHER_URL + `lat=` + lat + `&lon=` + lng + `&appid=${keys.WEATHER_MAP_KEY}&units=imperial`).done((data) => {
 
         let html = " "
         // let stopingPoint = 4
 
         for (let i = 0; i < data.daily.length; i++) {
             html += `
-
+    
     <div style="border: 2px solid black">
     <div>${epochConverter(data.daily[i].dt)} </div>
     <hr>
@@ -124,7 +88,6 @@ function onDragEnd() {
     <hr>
     <div>Today's UV Index: ${data.daily[i].uvi}</div>
     </div> `
-
             $("#weather").html(html);
 
             if (i === 4) {
@@ -145,7 +108,7 @@ function onDragEnd() {
                 return data.features[0].place_name;
             });
     }
-    reverseGeocode({lat, lng}, mapbox_api_token).then(function(results) {
+    reverseGeocode({lat, lng}, keys.mapbox_api_token).then(function(results) {
         console.log(results)
 
     $("#h").html("Current Location: " + results);
@@ -202,6 +165,7 @@ function cloudCoverage(x) {
         return mist
     }
 }
+
 
 
 

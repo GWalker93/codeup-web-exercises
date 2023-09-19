@@ -51,18 +51,33 @@ console.log(atleast3Langues);
 //     Use .map to create an array of strings where each element is a user's email address
 
 let emails = users.map((x) => {
-    return lan
+    return `Everyones emails is ${x.email}.`
 })
 
-// let catsHumanAge = catsOnlyArray.map((cat) => {
-//     return `${cat.name} is ${(cat.age * 7)} years old`;
-// })
-//
-// console.log(catsHumanAge);
+console.log(emails)
 
-// Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+//      Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+
+let total = users.reduce((accumulation, currentNumber) => {
+    return accumulation + currentNumber.yearsOfExperience;
+}, 0);
+
+console.log(total)
+
+console.log(total/5)
+
 
 //     Use .reduce to get the longest email from the list of users.
 
+
 //     Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+
+let aStringOfNames = users.reduce((accumulator, names) => {
+    return accumulator + names.name + ", ";
+}, "Everyone's name is : ");
+
+console.log(aStringOfNames);
+
+
+
 
